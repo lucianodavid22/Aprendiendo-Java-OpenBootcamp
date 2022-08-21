@@ -57,6 +57,12 @@ public class Main {
         // y ademas se copian todos los elementos que habia en el anterior vector a este nuevo array
         // lo que produce un gran consumo de memoria.
 
+        System.out.println("DESVENTAJA DE USAR VECTORES: Los vectores por debajo son arrays,\n" +
+                "   al agregar elementos y superar la capacidad por defecto del vector,\n" +
+                "   por detras del lenguaje, se crea un nuevo array en el cual se agrega mas capacidad\n" +
+                "   y ademas se copian todos los elementos que habia en el anterior vector a este nuevo array\n" +
+                "   lo que produce un gran consumo de memoria.");
+
         ArrayList<String> apellidos = new ArrayList<>();
         apellidos.add("Dorregaray");
         apellidos.add("Juncos");
@@ -95,9 +101,28 @@ public class Main {
                 System.out.println("ArrayList sin numeros pares: " + numbers);
             }
         }
+
+        try{
+            dividePorCero(22, 0);
+        }
+        catch(ArithmeticException e){
+            System.out.println("Mensaje de exception: " + e.getMessage());
+        }
+        finally{
+            System.out.println("Demo de codigo");
+        }
+    }
+
+    public static int dividePorCero(int a, int b) throws ArithmeticException {
+        int resultado = 0;
+        try{
+            return a / b;
+        }
+        catch(ArithmeticException e){
+            throw new ArithmeticException("Esto no puede hacerse");
+        }
     }
 }
 
-//Crea una función DividePorCero. Esta, debe generar una excepción ("throws") a su llamante del tipo ArithmeticException que será capturada por su llamante (desde "main", por ejemplo). Si se dispara la excepción, mostraremos el mensaje "Esto no puede hacerse". Finalmente, mostraremos en cualquier caso: "Demo de código".
 //Utilizando InputStream y PrintStream, crea una función que reciba dos parámetros: "fileIn" y "fileOut". La tarea de la función será realizar la copia del fichero dado en el parámetro "fileIn" al fichero dado en "fileOut".
 //Sorpréndenos creando un programa de tu elección que utilice InputStream, PrintStream, excepciones, un HashMap y un ArrayList, LinkedList o array.
