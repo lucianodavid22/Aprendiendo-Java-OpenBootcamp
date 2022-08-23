@@ -5,3 +5,5 @@ En este repositorio estoy guardando los ejercicios y el progreso en mi aprendiza
 Ejercicio 1, 2, 3 y 4 corresponden al curso de introducción a la programación.
 <br>
 JavaBasico corresponde al curso de Java Básico.
+<br> 
+Java Ejercicios contiene ejercicios lógicos para practicar la sintaxis de java y mejorar la lógica de programación.
